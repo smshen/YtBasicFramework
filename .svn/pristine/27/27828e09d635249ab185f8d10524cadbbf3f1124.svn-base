@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:background="@color/white"
+    android:clickable="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_marginLeft="1dp"
+            android:id="@+id/key_board_num_one"
+            style="@style/key_board_num_btn_bg"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/key_board_num_two"
+            style="@style/key_board_num_center_btn_bg"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/key_board_num_three"
+            style="@style/key_board_num_btn_bg"
+            android:layout_marginRight="1dp"
+            android:text="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/key_board_num_four"
+            style="@style/key_board_num_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="4" >
+        </Button>
+
+        <Button
+            android:id="@+id/key_board_num_five"
+            style="@style/key_board_num_center_btn_bg"
+            android:text="5" >
+        </Button>
+
+        <Button
+            android:id="@+id/key_board_num_six"
+            style="@style/key_board_num_btn_bg"
+            android:layout_marginRight="1dp"
+            android:text="6" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/key_board_num_seven"
+            android:layout_marginLeft="1dp"
+            style="@style/key_board_num_btn_bg"
+            android:text="7" >
+        </Button>
+
+        <Button
+            android:id="@+id/key_board_num_eight"
+            style="@style/key_board_num_center_btn_bg"
+            android:text="8" >
+        </Button>
+
+        <Button
+            android:id="@+id/key_board_num_nine"
+            style="@style/key_board_num_btn_bg"
+            android:layout_marginRight="1dp"
+            android:text="9" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <!-- 输入法切换 -->
+
+        <Button
+            android:id="@+id/btnNumBoardChangeAbc"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.49"
+            android:background="@drawable/key_dot_bg_select"
+            android:text="ABC"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_one" />
+
+        <View
+            android:id="@+id/bottomfirstview"
+            android:layout_width="0dp"
+             android:visibility="visible"
+             android:clickable="false"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.02" />
+        
+
+        <Button
+            android:id="@+id/btnNumBoardPoint"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.49"
+             android:visibility="visible"
+            android:background="@drawable/key_bg_select"
+            android:text="@string/char_46"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_one" />
+        
+           <Button
+            android:id="@+id/btnNum_X"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/key_bg_select"
+            android:text="X"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        
+
+        <Button
+            android:id="@+id/key_board_num_zero"
+            style="@style/key_board_num_center_btn_bg"
+            android:text="0" />
+        <!-- 回退 -->
+
+        <Button
+            android:id="@+id/btnNumBoardOk"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/key_delete_greenbg_select"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="210dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/key_board_abc_q"
+            style="@style/key_board_abc_btn_bg"
+            android:text="q" />
+
+        <Button
+            android:id="@+id/key_board_abc_w"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="w" />
+
+        <Button
+            android:id="@+id/key_board_abc_e"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="e" />
+
+        <Button
+            android:id="@+id/key_board_abc_r"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="r" />
+
+        <Button
+            android:id="@+id/key_board_abc_t"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="t" />
+
+        <Button
+            android:id="@+id/key_board_abc_y"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="y" />
+
+        <Button
+            android:id="@+id/key_board_abc_u"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="u" />
+
+        <Button
+            android:id="@+id/key_board_abc_i"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="i" />
+
+        <Button
+            android:id="@+id/key_board_abc_o"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="o" />
+
+        <Button
+            android:id="@+id/key_board_abc_p"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/key_board_abc_a"
+            style="@style/key_board_abc_btn_bg"
+            android:text="a" />
+
+        <Button
+            android:id="@+id/key_board_abc_s"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="s" />
+
+        <Button
+            android:id="@+id/key_board_abc_d"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="d" />
+
+        <Button
+            android:id="@+id/key_board_abc_f"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="f" />
+
+        <Button
+            android:id="@+id/key_board_abc_g"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="g" />
+
+        <Button
+            android:id="@+id/key_board_abc_h"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="h" />
+
+        <Button
+            android:id="@+id/key_board_abc_j"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="j" />
+
+        <Button
+            android:id="@+id/key_board_abc_k"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="k" />
+
+        <Button
+            android:id="@+id/key_board_abc_l"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="l" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/btnAbcBoardAbcChange"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="-2dp"
+            android:layout_weight="1.3"
+            android:background="@drawable/key_shift_bg_select"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_five" />
+		<View 
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.2"
+		    android:visibility="invisible"
+		    />
+        
+        <Button
+            android:id="@+id/key_board_abc_z"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="z" />
+
+        <Button
+            android:id="@+id/key_board_abc_x"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/key_board_abc_c"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="c" />
+
+        <Button
+            android:id="@+id/key_board_abc_v"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="v" />
+
+        <Button
+            android:id="@+id/key_board_abc_b"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="b" />
+
+        <Button
+            android:id="@+id/key_board_abc_n"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="n" />
+
+        <Button
+            android:id="@+id/key_board_abc_m"
+            style="@style/key_board_abc_btn_bg"
+            android:layout_marginLeft="1dp"
+            android:text="m" />
+        
+        <View 
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.2"
+		    android:visibility="invisible"
+		    />
+
+        <Button
+            android:id="@+id/btnAbcBoardDel"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1.3"
+            android:background="@drawable/key_delete_bg_select" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAbcBoardChangeNum"
+            style="@style/key_board_abc_btn_bg"
+            android:background="@drawable/key_changenum_bg_select"
+            android:text="123"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btnAbcBoardSpace"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="Space"
+            android:background="@drawable/key_space_bg_select"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_one" />
+
+        <Button
+            android:id="@+id/btnAbcBoardChangeSign"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/key_changenum_bg_select"
+            android:text="＠#%"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+<View 
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+    />
+        <Button
+            android:id="@+id/btnAbcBoardOk"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/key_sure_bg_select"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentpadrootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/contentpdpanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1.0"
+        android:background="@color/black" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuPadLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/daikuanbg"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/height_5"
+        android:paddingLeft="@dimen/height_5"
+        android:paddingRight="@dimen/height_5" >
+
+        <LinearLayout
+            android:id="@+id/menuRoot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/height_5"
+            android:layout_marginRight="@dimen/height_5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutKeyBoard"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_alignParentBottom="true"
+    android:clickable="true"
+    android:layout_gravity="center_horizontal|bottom"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/keypad_title_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:weightSum="7" >
+
+
+        <TextView
+            android:id="@+id/txtBoardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="安全键盘"
+            android:textColor="#707f93"
+            android:textSize="17sp" />
+
+
+        <Button
+            android:id="@+id/btnBoardCancle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/keypad_titlebg_down_xml"
+            android:gravity="center" >
+        </Button>
+    </RelativeLayout>
+
+    <!-- 数字键盘 -->
+
+    <LinearLayout
+        android:id="@+id/keypad_num"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <include layout="@layout/key_board_number" />
+    </LinearLayout>
+    <!-- 全键盘 -->
+
+    <LinearLayout
+        android:id="@+id/keypad_abc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/key_board_abcs" />
+    </LinearLayout>
+    <!-- 符号1 -->
+
+    <LinearLayout
+        android:id="@+id/key_board_sign"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/key_board_signs" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+package com.yitong.service;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.AbstractHttpClient;
+
+import android.content.Context;
+
+import com.yitong.http.AsyncHttpClient;
+import com.yitong.http.RequestParams;
+import com.yitong.http.ResponseHandlerInterface;
+
+/**
+ * 异步网络请求接口
+ * @Author lewis(lgs@yitong.com.cn) 2014-1-17 下午1:19:23
+ * Copyright (c) 2014 Shanghai P&C Information Technology Co.,Ltd.
+ */
+public class APPRestClient {
+	private static final String LOG_TAG = "APPRestClient";
+	
+	private static String BASE_URL = "";
+	private static AsyncHttpClient client = new AsyncHttpClient(20000, 30000, 3);
+
+	static {
+		client.addHeader("user-agent", "android");
+	}
+	
+	/**
+	 * 获取网络请求基地址
+	 */
+	public static String getBaseUrl() {
+		return BASE_URL;
+	}
+	
+	/**
+	 * 设置网络请求基地址
+	 */
+	public static boolean setBaseUrl(String url) {
+		BASE_URL = url;
+		return true;
+	}
+
+	/**
+	 * 获取 AsyncHttpClient
+	 */
+	public static AsyncHttpClient getAsyncHttpClient() {
+		return client;
+	}
+	
+	/**
+	 * 获取客户端cookie列表
+	 */
+	public static List<Cookie> getCookieList() {
+		AbstractHttpClient abClient = (AbstractHttpClient)APPRestClient.client.getHttpClient();
+		return abClient.getCookieStore().getCookies();
+	}
+	
+	/**
+	 * 表单get提交方式(无context)
+	 * @param params 保存key:value的对象
+	 */
+	public static void get(String relativeUrl, RequestParams params, ResponseHandlerInterface responseHandler) {
+		client.get(getAbsoluteUrl(relativeUrl), params, responseHandler);
+	}
+	
+	/**
+	 * 表单post提交方式(无context)
+	 * @param params 保存key:value的对象
+	 */
+	public static void post(String relativeUrl, RequestParams params, ResponseHandlerInterface responseHandler) {
+		client.post(getAbsoluteUrl(relativeUrl), params, responseHandler);
+	}
+
+	/**
+	 * 表单post提交方式
+	 * @param params 保存key:value的对象
+	 */
+	public static void post(Context context, String relativeUrl, RequestParams params, ResponseHandlerInterface responseHandler) {
+		client.post(context, getAbsoluteUrl(relativeUrl), params, responseHandler);
+	}
+	
+	/**
+	 * 字符串post提交方式(无context)
+	 * @param params String字符串
+	 */
+	public static void post(String relativeUrl, String params, ResponseHandlerInterface responseHandler) {
+		HttpEntity entity = APPRestParamsToEntity.paramsToEntity(params);
+		client.post(null, getAbsoluteUrl(relativeUrl), entity, null, responseHandler);
+	}	
+
+	/**
+	 * 字符串post提交方式
+	 * @param params String字符串
+	 */
+	public static void post(Context context, String url, String params, ResponseHandlerInterface responseHandler) {
+		HttpEntity entity = APPRestParamsToEntity.paramsToEntity(params);
+		client.post(context, url, entity, null, responseHandler);
+	}
+	
+	/**
+	 * json字符串post提交方式
+	 * @param params json字符串对应map
+	 */	
+    public static void post(String relativeUrl, Map<String, Object> params, ResponseHandlerInterface responseHandler) {
+    	HttpEntity entity = APPRestParamsToEntity.paramsToJsonEntity(params);
+    	client.post(null, getAbsoluteUrl(relativeUrl), entity, "application/json", responseHandler);
+    }
+
+	/**
+	 * 销毁activity使用
+	 */
+	public static void cancelRequests(Context context) {
+		client.cancelRequests(context, true);
+	}
+	
+	/**
+	 * 获取网络请求基地址
+	 */
+	private static String getAbsoluteUrl(String relativeUrl) {
+		return BASE_URL + relativeUrl;
+	}
+}

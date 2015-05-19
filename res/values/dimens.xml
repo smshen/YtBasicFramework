@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 九种常用字体 -->
+    <dimen name="text_size_zero">22sp</dimen>
+    <dimen name="text_size_zero1">20sp</dimen>
+    <dimen name="text_size_one">18sp</dimen>
+    <dimen name="text_size_two">17sp</dimen>
+    <dimen name="text_size_three">16sp</dimen>
+    <dimen name="text_size_four">15sp</dimen>
+    <dimen name="text_size_five">14sp</dimen>
+    <dimen name="text_size_six">13sp</dimen>
+    <dimen name="text_size_seven">12sp</dimen>
+    <dimen name="text_size_eight">11sp</dimen>
+    <dimen name="text_size_nine">10sp</dimen>
+    <dimen name="text_size_ten">9sp</dimen>
+    <dimen name="text_size_elev">8sp</dimen>
+    
+    <!-- 个人贷款 -->
+    <dimen name="gerendaikuan_view">1dp</dimen>
+    <dimen name="gerendaikuan_img_btn_width">25dp</dimen>
+    <dimen name="gerendaikuan_img_btn_height">25dp</dimen>
+    <dimen name="gerendaikuan_marginleft">20dp</dimen>
+    <dimen name="gerendaikuan_edittext_height">35dp</dimen>
+    
+    <!-- 展架 -->
+    <dimen name="main_a_product_width">200dp</dimen>
+    <dimen name="main_a_product_height">270dp</dimen>
+</resources>
